@@ -51,7 +51,7 @@ namespace NZWalks.API.Repositories
         {
             var existingWalk = await dbContext.Walks.FirstOrDefaultAsync(x => x.Id == id);  
 
-            if (existingWalk != null)
+            if (existingWalk == null)
             {
                 return null;
             }
